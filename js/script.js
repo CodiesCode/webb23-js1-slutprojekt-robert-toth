@@ -97,6 +97,7 @@ async function submitForm(event) {
     box.appendChild(windSpeedElement);
 
   } catch (error) {
+    console.log(error);
     box.appendChild(errorElement);
   }
 }
