@@ -1,5 +1,5 @@
 const DONE = 4;
-let baseUrl = "http://api.openweathermap.org/"
+let baseUrl = "https://api.openweathermap.org/"
 
 const getLatLongUrl = (searchTerm) => {
   return `${baseUrl}geo/1.0/direct?q=${searchTerm}&limit=1&appid=676c72c916e72c31ba00527baf05ec4e`;
@@ -11,7 +11,7 @@ const getWeatherDataUrl = (lat, lon) => {
 
 const makeRequest = (url) => {
   return new Promise(function (resolve, reject) {
-    let xhr = new XMLHttpRequest();
+    let xhr = new XMLHttpsRequest();
     xhr.open('GET', url, true);
 
     xhr.onreadystatechange = function () {
@@ -19,7 +19,7 @@ const makeRequest = (url) => {
         if (xhr.status === 200) {
           resolve(xhr.responseText);
         } else {
-          reject(new Error('HTTP status code: ' + xhr.status));
+          reject(new Error('HTTPS status code: ' + xhr.status));
         }
       }
     };
