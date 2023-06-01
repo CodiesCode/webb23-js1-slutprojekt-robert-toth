@@ -11,7 +11,7 @@ const getWeatherDataUrl = (lat, lon) => {
 
 const makeRequest = (url) => {
   return new Promise(function (resolve, reject) {
-    let xhr = new XMLHttpsRequest();
+    let xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
 
     xhr.onreadystatechange = function () {
