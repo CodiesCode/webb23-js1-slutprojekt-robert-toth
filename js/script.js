@@ -19,7 +19,7 @@ const makeRequest = (url) => {
         if (xhr.status === 200) {
           resolve(xhr.responseText);
         } else {
-          reject(new Error('HTTPS status code: ' + xhr.status));
+          reject(new Error('HTTP status code: ' + xhr.status));
         }
       }
     };
