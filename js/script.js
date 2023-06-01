@@ -73,7 +73,7 @@ async function submitForm(event) {
 
     let searchTermElement = document.createElement("p");
     searchTermElement.className = "search-term";
-    searchTermElement.textContent = searchTerm
+    searchTermElement.textContent = searchTerm.toUpperCase();
     box.appendChild(searchTermElement);
 
     let descriptionElement = document.createElement("p");
